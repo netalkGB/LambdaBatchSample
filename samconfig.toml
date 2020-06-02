@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "lambda-batch-sample"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-ebl92zk64wzw"
+s3_prefix = "lambda-batch-sample"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "NodeEnv=\"production\""

@@ -1,0 +1,12 @@
+{
+  "name": "lambda-batch-sample",
+  "version": "1.0.0",
+  "description": "lambda-batch-sample",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

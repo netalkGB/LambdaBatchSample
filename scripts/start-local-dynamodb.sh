@@ -1,0 +1,1 @@
+docker run --name dynamodb -d --network host -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb

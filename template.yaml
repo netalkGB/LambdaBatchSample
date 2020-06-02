@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Lambda Batch Sample
+  Say "test"
+
+Globals:
+  Function:
+    Timeout: 60
+    Environment:
+      Variables:
+        NODE_ENV: !Ref NodeEnv
+Resources:
+  LambdaBatchSampleFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.lambdaHandler
+      Runtime: nodejs12.x
+      Policies:
+        - arn:aws:iam::417650546427:policy/BatchExecutor
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: rate(60 minutes)
+            Name: every-60min
+            Description: Execute LambdaBatchSampleFunction every 60 minutes
+            Enabled: True
+Parameters:
+  NodeEnv:
+    Type: String
+    Default: 'production'
