@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "build": "rm -r ../out; tsc --build tsconfig.json && cp ./package.json ../out"
+    "build": "rm -r ../out; tsc --build tsconfig.json && cp ./package.json ../out",
+    "transpile": "tsc --build tsconfig.json"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
