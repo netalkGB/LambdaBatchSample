@@ -30,4 +30,4 @@ Resources:
 Parameters:
   NodeEnv:
     Type: String
-    Default: 'production'
+    Default: 'development'
